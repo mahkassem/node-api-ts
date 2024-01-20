@@ -13,5 +13,11 @@ npm install
 ## Running the app
 
 ```bash
-npx tsc && node .
+npm start
+```
+
+## Development
+
+```bash
+npm run dev
 ```
