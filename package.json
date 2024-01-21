@@ -4,9 +4,9 @@
   "description": "API with Node.js and TypeScript",
   "main": "build/app.js",
   "scripts": {
-    "build": "tsc -p .",
+    "build": "npx tsc -p .",
     "start": "node .",
-    "dev": "nodemon .",
+    "dev": "npx nodemon src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
