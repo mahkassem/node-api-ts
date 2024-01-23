@@ -13,6 +13,7 @@ const port = 3000; // Port number
 app.use(cors()); // Enable CORS
 app.use(helmet()); // Enable Helmet
 app.use(morgan('dev')); // Enable Morgan
+app.use(express.json()); // Enable JSON body parser
 
 // Use routes
 app.use('/', router);
