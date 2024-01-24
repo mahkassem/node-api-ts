@@ -4,15 +4,20 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import router from './routes';
+import dotenv from 'dotenv';
+
+// Initialize configuration
+dotenv.config();
 
 // Create Express server
 const app = express(); // New express instance
-const port = 3000; // Port number
+const port = process.env['APP_PORT'] || 3000; // Port number
+const env = process.env['APP_ENV'] || 'dev'; // Environment
 
 // Express configuration
 app.use(cors()); // Enable CORS
 app.use(helmet()); // Enable Helmet
-app.use(morgan('dev')); // Enable Morgan
+app.use(morgan(env)); // Enable Morgan
 app.use(express.json()); // Enable JSON body parser
 
 // Use routes
