@@ -12,7 +12,7 @@ export const userSchema = Joi.object({
   id: Joi.number().integer().required(),
   name: Joi.string().required(),
   email: Joi.string().email().required(),
-  password: Joi.string().required().length(8),
+  password: Joi.string().required().min(8),
 });
 
 export const validateUser = (
